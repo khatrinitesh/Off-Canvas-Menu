@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>CSS Reference</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+	<div class="sidebar" id="sidebar">
+    <a href="" class="close" onclick='close_sidebar()'>&times;</a>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="content" id='content'>
+    <h2>Sidenav Push Example</h2>
+    <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+
+    <a href="javascript:void(0)" class='open_sidebar' onclick='openNav()'>&#9776; Open</a>
+  </div>
+ 
+  <!-- js-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type='text/javascript'>
+      function openNav(){
+        document.getElementById("sidebar").style.width = "250px";
+        document.getElementById("content").style.marginLeft = "250px";
+        document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
+      }
+
+      function close_sidebar(){
+        document.getElementById('sidebar').style.width = '0';
+        document.getElementById('content').style.marginLeft = '0';
+        document.body.style.backgroundColor = 'white';
+      }
+  </script>
+</body>
+</html>
